@@ -1,0 +1,23 @@
+.btn-top {
+  @include reset-btn;
+  background-color: rgba(#000, 0.4);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m10.598 5.013 8.154 8.281c.33.33.33.865 0 1.195l-.499.5a.844.844 0 0 1-1.195 0L10 7.796 2.942 14.98a.844.844 0 0 1-1.195 0l-.5-.499a.844.844 0 0 1 0-1.195l8.155-8.281a.85.85 0 0 1 1.196.007Z' fill='%23fff'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: top 13px center;
+  background-size: 16px 16px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999999;
+  cursor: pointer;
+  display: none;
+  @include trans-btn;
+  &:hover {
+    opacity: 0.8;
+  }
+}

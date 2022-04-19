@@ -1,0 +1,9 @@
+./node_modules
+./package-lock.json
+./.DS_store
+node_modules
+.idea
+*.sublime*
+.vscode
+*.log*
+Thumbs.db

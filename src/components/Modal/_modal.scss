@@ -1,0 +1,101 @@
+// Общие стили
+.modal {
+  &__overlay {
+    z-index: 1000000;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__container {
+    max-width: 700px;
+    background-color: #fff;
+    box-shadow: 0px 16px 50px -10px rgb(75 78 83 / 40%);
+    padding: 40px;
+    margin: 48px 20px;
+    border-radius: 16px;
+  }
+
+  &__head {
+    position: relative;
+    text-align: center;
+    margin-bottom: 24px;
+
+    &--title {
+      color: $color--title;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    &--subtitle {
+      font-size: 16px;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+  }
+  &__content {
+    color: $color--body;
+    margin: 0;
+  }
+
+  &__close {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.4;
+    @include trans-btn;
+    &:hover {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+    i {
+      @include trans-btn;
+      color: $color--body;
+      font-size: 24px;
+      &:hover {
+        color: $color--error;
+      }
+    }
+  }
+}
+
+// Модальная форма
+.modal-form {
+  .modal__container {
+    max-width: 390px;
+  }
+  .form {
+    background-color: transparent;
+    box-shadow: none;
+    padding: inherit;
+  }
+}
+
+// Для текста
+.modal-text {
+  .modal__head--title {
+    text-align: left;
+  }
+}
+
+@media (max-width: 390px) {
+  .modal__container {
+    padding: 28px;
+    border-radius: 8px;
+  }
+  .modal__head {
+    margin-bottom: 16px;
+  }
+  .modal__head--title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .modal__close i {
+    font-size: 20px;
+  }
+
+  .modal .form__label {
+    display: none;
+  }
+}

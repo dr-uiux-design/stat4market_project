@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('./chank/_head.html', {"title" : "Главная"})
+
+<body>
+  @include('../components/Preloader/_preloader.html')
+  @include('../components/Btn-top/_btn-top.html')
+
+  <main class="wrapper">
+    @include('./blocks/_header.html')
+    <div class="container">
+      <h1>Шаблон для других страниц</h1>
+    </div>
+  </main>
+
+  @include('./blocks/_footer.html')
+</body>
+
+</html>

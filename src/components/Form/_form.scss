@@ -1,0 +1,322 @@
+// Form
+::placeholder {
+  color: rgba(0, 0, 0, 0.32);
+}
+
+.form {
+  max-width: 440px;
+  background-color: #fff;
+  padding: 30px 40px;
+  box-shadow: 0px 16px 50px -10px rgba(75, 78, 83, 0.4);
+  border-radius: 8px;
+  text-align: center;
+
+  &__container {
+    width: 100%;
+  }
+
+  // Head
+  &__head {
+    margin-bottom: 32px;
+
+    &_title {
+      margin-bottom: 8px;
+    }
+
+    &_description {
+      opacity: 0.6;
+    }
+  }
+
+  // Body
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    margin-top: 20px;
+    // margin-bottom: 20px;
+  }
+
+  &__icon {
+    font-size: 18px;
+    position: absolute;
+    bottom: 15px;
+    left: 16px;
+    opacity: 0.2;
+  }
+
+  &__label {
+    color: $color--title;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  &__input,
+  &__textarea,
+  &__select,
+  .select__toggle {
+    outline: none;
+    height: 48px;
+    padding: 8px 16px;
+    padding-left: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: $color--body;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease 0s;
+
+    &:focus,
+    &:active {
+      border: 1px solid #66afe9;
+      box-shadow: 0px 2px 16px rgb(102, 175, 233, 40%);
+    }
+  }
+
+  &__select {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 25px;
+    background: url("../img/icons/select-arrow.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: right 8px top 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .select__toggle {
+    padding-left: 16px;
+  }
+
+  &__textarea {
+    min-height: 104px;
+    // resize: none;
+    resize: vertical;
+    padding: 16px;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.input-required {
+  color: $color--error;
+}
+
+// Radio + Label
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    display: inline-flex;
+    line-height: 140%;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      align-self: flex-start;
+      flex: 0 0 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      margin-right: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      background-color: $color--success;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.options__radio:checked + .options__label::after {
+  transform: scale(1);
+}
+
+// Input Checkbox
+.checkbox {
+  cursor: pointer;
+  position: relative;
+
+  &__input {
+    display: none;
+
+    + label {
+      user-select: none;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+      }
+    }
+
+    &:checked + label::before {
+      border-color: $color--success;
+      background-color: $color--success;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+
+    /* стили при наведении курсора на checkbox */
+    &:not(:disabled):not(:checked) + label:hover::before {
+      border-color: #b3d7ff;
+    }
+
+    /* стили для активного состояния чекбокса (при нажатии на него) */
+    &:not(:disabled):active + label::before {
+      background-color: #b3d7ff;
+      border-color: #b3d7ff;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе */
+    &:focus + label::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    &:focus:not(:checked) + label::before {
+      border-color: #80bdff;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    &:disabled + label::before {
+      background-color: #e9ecef;
+    }
+  }
+
+  // .checkbox__label
+  &__label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 140%;
+    padding-left: 28px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+  }
+
+  // .checkbox__link
+  &__link {
+    color: $color--body;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Input File
+.file {
+  // .file__item
+  &__item {
+    position: relative;
+  }
+
+  // .file__input
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  // .file__button
+  &__button {
+    display: inline-flex;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $color--primary;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: $color--primary;
+    }
+  }
+
+  // .file__preview
+  &__preview {
+    display: inline-block;
+    max-width: 100%;
+    padding: 10px 0 0 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// Media form
+@media (max-width: 480px) {
+  .form {
+    padding: 24px;
+  }
+
+  .form__head {
+    margin-bottom: 24px;
+  }
+}

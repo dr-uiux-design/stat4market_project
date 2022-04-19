@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('./chank/_head.html', {"title" : "Спасибо за заявку!"})
+
+<body class="bg-page">
+  @include('../components/Preloader/_preloader.html')
+  @include('../components/Btn-top/_btn-top.html')
+
+  @include('./blocks/_header.html')
+
+  <main class="wrapper">
+    <div class="thank-you">
+      <div class="thank-you__container">
+        <i class="ic-check-circle thank-you__icon"></i>
+        <h3 class="thank-you__title">Спасибо за заявку!</h3>
+        <p class="thank-you__description">Ожидайте! Наш специалист свяжется с Вами в ближайшее время.</p>
+        <a href="./" class="btn btn__stroke btn__lg thank-you__btn">На главную</a>
+      </div>
+    </div>
+  </main>
+
+  @include('./blocks/_footer.html')
+</body>
+
+</html>

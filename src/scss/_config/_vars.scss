@@ -1,0 +1,60 @@
+// Настройка wrapper и container
+$wrapper-max: 1920px !default;
+$wrapper-min: 320px !default;
+
+$container-maxWidth: 1170px;
+$container-padding: 0 20px;
+
+// Font Family
+$font--default: "Inter", sans-serif;
+
+// Font-weight
+$font--300: 300;
+$font--400: 400;
+$font--500: 500;
+$font--600: 600;
+$font--700: 700;
+$font--800: 800;
+$font--800: 900;
+
+// Font Size
+$font-size--body: 16px;
+$font-size--h1: 56px;
+$font-size--h2: 48px;
+$font-size--h3: 36px;
+$font-size--h4: 20px;
+$font-size--h5: 18px;
+$font-size--h6: 16px;
+
+// line-height
+$line-height--120: 120% !default;
+$line-height--140: 140% !default;
+$line-height--150: 150% !default;
+
+// Colors
+
+// Brend colors
+$color--primary: #0060e5;
+
+// Text colors
+$color--title: #212121;
+$color--body: #424242;
+
+// BG colors
+$color--bg-light: #f2f2f2;
+$color--bg-dark: #212121;
+
+// System colors
+$color--light: #fff;
+$color--dark: #000;
+$color--success: #388e3c;
+$color--error: #d32f2f;
+$color--warning: #ffa000;
+
+// Box-Shadow
+$bxs--1: 0px 2px 4px rgba(77, 83, 103, 0.08);
+$bxs--2: 0px 4px 16px rgba(0, 0, 0, 0.04);
+$bxs--3: 0px 16px 24px rgba(77, 83, 103, 0.08);
+$bxs--4: 0px 24px 38px 3px rgba(117, 127, 136, 0.14),
+  0px 9px 46px 8px rgba(117, 127, 136, 0.12),
+  0px 11px 15px -7px rgba(117, 127, 136, 0.2);

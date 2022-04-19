@@ -1,0 +1,55 @@
+<!-- Кнопка вызова модального окна -->
+<button type="button" class="btn-reset btn btn__fill btn__md" data-custom-open="modal-form"
+  data-form="Название формы (с какого блока отправили)">Оставить Заявку</button>
+
+<!-- Форма заявки в модальном окне -->
+<div class="modal micromodal-slide modal-form" id="modal-form" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <!-- кнопка закрытия -->
+      <button class="btn-reset modal__close" aria-label="Закрыть окно" data-micromodal-close><i class="ic-close"></i></button>
+
+      <!-- заголовок модального окна -->
+      <header class="modal__head">
+        <h3 class="modal__head--title">Оставьте заявку</h3>
+        <p class="modal__head--subtitle">Оставьте заявку и мы вам перезвоним!</p>
+      </header>
+
+      <!-- контент модального окна -->
+      <div class="modal__content">
+        <!-- Форма заявки -->
+        <form action="#" method="POST" class="form">
+          <!-- Hidden Fields -->
+          <!-- Передача названия формы с кнопки -->
+          <input type="hidden" name="form">
+          <input type="hidden" name="project_name" value="Название сайта">
+          <input type="hidden" name="admin_email" value="dimarik34rus@ya.ru">
+          <input type="hidden" name="form_subject" value="Заявка с сайта (название сайта)">
+          <!-- END Hidden -->
+
+          <!-- Имя -->
+          <div class="form__item">
+            <label for="formName" class="form__label">Имя:</label>
+            <input type="text" name="name" class="form__input input-name" id="formName" placeholder="Укажите имя">
+            <i class="form__icon ic-user-circle"></i>
+          </div>
+          <!-- Телефон -->
+          <div class="form__item">
+            <label for="formPhone" class="form__label">Телефон:<span class="input-required">*</span></label>
+            <input type="tel" name="phone" class="form__input input-phone" id="formPhone" placeholder="Укажите телефон" required>
+            <i class="form__icon ic-phone"></i>
+          </div>
+          <button type="submit" class="form__btn btn-reset btn btn__md">Отправить заявку</button>
+          <!-- Соглашение с правилами -->
+          <div class="form__item">
+            <div class="checkbox">
+              <input type="checkbox" name="agreement" class="checkbox__input" id="formAgreement_1" checked>
+              <label for="formAgreement_1" class="checkbox__label">Я принимаю условия <a href="privacy-policy.html" target="_blank"
+                  class="checkbox__link">Политики конфиденциальности</a></label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

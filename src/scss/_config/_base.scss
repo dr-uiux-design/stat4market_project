@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  position: relative;
+}
+
+// Прижатие footer к низу
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+// Wrapper & Container
+.wrapper {
+  max-width: $wrapper-max;
+  min-width: $wrapper-min;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $container-maxWidth;
+  padding: $container-padding;
+  margin: 0 auto !important;
+}
+
+// Настройка стилей текста
+body {
+  color: $color--body;
+  font-family: $font--default;
+  font-size: $font-size--body;
+  font-weight: $font--400;
+  line-height: $line-height--150;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font--default;
+  color: $color--title;
+  line-height: $line-height--120;
+}
+
+h1 {
+  font-size: $font-size--h1;
+  font-weight: $font--800;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: $font-size--h2;
+  font-weight: $font--800;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: $font-size--h3;
+  font-weight: $font--700;
+  line-height: $line-height--150;
+}
+
+h4 {
+  font-size: $font-size--h4;
+  font-weight: $font--700;
+  line-height: $line-height--150;
+}
+
+h5 {
+  font-size: $font-size--h5;
+  font-weight: $font--700;
+  line-height: $line-height--150;
+}
+
+h6 {
+  font-size: $font-size--h6;
+  font-weight: $font--700;
+}
+
+.p-20 {
+  font-size: 20px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.p-18 {
+  font-size: 18px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.p-16 {
+  font-size: 16px;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.p-14 {
+  font-size: 14px;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+// Base
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  @include trans-link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+    outline: none;
+  }
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.btn-reset {
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+a {
+  color: $color--body;
+
+  &:hover {
+    color: $color--primary;
+  }
+}
+
+mark {
+  background: #fff2be;
+}
+
+// Colors text
+
+.color-text {
+  color: $color--body;
+}
+
+.color-title {
+  color: $color--title;
+}
+
+.color-link {
+  color: $color--primary;
+}
+
+.color-link {
+  color: $color--primary;
+}
+
+// Align Text
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bg-page {
+  background-color: $color--bg-light;
+}
+
+// Buttons
+.btn {
+  @include reset-btn;
+  @include trans-btn;
+  display: inline-block;
+  min-height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  background: $color--primary;
+  border-radius: 6px;
+  color: $color--light;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+
+  &:hover {
+    color: $color--light;
+    text-decoration: none;
+    background: rgba($color--primary, 0.8);
+  }
+
+  &__secondary {
+    color: $color--body;
+    background: transperant;
+    border: 2px solid $color--primary;
+  }
+}
