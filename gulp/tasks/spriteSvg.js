@@ -35,7 +35,7 @@ export const spriteSvg = () => {
 			mode: {
 				stack: {
 					sprite: `../svg-sprite.svg`,
-					example: true // создавать страницу с превью иконок
+					example: false // создавать страницу с превью иконок
 				}
 			}
 		}))
