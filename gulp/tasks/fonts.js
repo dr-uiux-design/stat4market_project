@@ -11,11 +11,10 @@ export const fontTTF = () => {
 				message: "Error: <%= error.message %>"
 			}))
 		}))
-		.pipe(app.plugins.newer(app.path.build.fonts))
 		.pipe(fonter({
 			formats: ['ttf']
 		}))
-		.pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`));
+		.pipe(app.gulp.dest(`${app.path.srcFolder}/fonts`));
 }
 
 export const fontWoff = () => {
