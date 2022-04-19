@@ -59,6 +59,8 @@ export const js = () => {
 			console.error('WEBPACK ERROR', err);
 			this.emit('end');
 		})
-		.pipe(app.gulp.dest(app.path.build.js)) // переносим файлы
+		.pipe(app.gulp.dest(app.path.build.js, {
+			sourcemaps: app.isDev
+		})) // переносим файлы
 		.pipe(app.plugins.browserSync.stream());
 }
