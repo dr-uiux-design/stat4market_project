@@ -17,15 +17,16 @@ git clone https://github.com/dr-uiux-design/gulp4_starter2022.git
 
 `npm run clean` - удаляет папку dist.
 
-## Работа со шрифтами (папка ./src/fonts/)
+# Работа со шрифтами (папка ./src/fonts/)
 `npm run fontTTF` - конвертирует шрифты otf в ttf.
 `npm run fontWoff` - конвертирует шрифты ttf в woff. 
 `npm run fontWoff2` - конвертирует шрифты ttf в woff2.
 
-## SVG спрайты (папка ./src/img/_svg/)
+# SVG спрайты (папка ./src/img/_svg/)
 1) Закинуть svg иконки в эту папку и выполнить команду
 `npm run spriteSvg` - конвертирует svg иконки в спрайт.
-## Структура папок и файлов
+
+# Структура папок и файлов
 
 ├── gulp/                         # Папки с тасками и плагинами Gulp
 ├── src/                          # Рабочие файлы проекта
