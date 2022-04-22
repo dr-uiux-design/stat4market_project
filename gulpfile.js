@@ -21,12 +21,13 @@ import { copy } from "./gulp/tasks/copy.js";
 import { clean } from "./gulp/tasks/clean.js" ;
 import { html } from "./gulp/tasks/html.js" ;
 import { scss } from "./gulp/tasks/scss.js";
-import { server } from "./gulp/tasks/server.js" ;
 import { js } from "./gulp/tasks/js.js" ;
 import { images } from "./gulp/tasks/images.js" ;
 import { fontTTF, fontWoff, fontWoff2, fontIcons } from "./gulp/tasks/fonts.js" ;
 import { spriteSvg } from "./gulp/tasks/spriteSvg.js" ;
+import { server } from "./gulp/tasks/server.js" ;
 import { zip } from "./gulp/tasks/zip.js";
+
 
 // Наблюдение за файлами
 function watcher() {
@@ -38,11 +39,14 @@ function watcher() {
 	gulp.watch(path.watch.images, spriteSvg);
 }
 
-// Удаление папки dist
-export { clean }
-
-// SVG Sprite
-export { spriteSvg }
+// Запуск задач по отдельности gulp название
+export { watcher }
+export { html }
+export { scss }
+export { js }
+export { images }
+export { clean } // Удаление папки dist
+export { spriteSvg } // Генерирование SVG Sprite
 
 // Генерация шрифтов в разные форматы
 export { fontTTF } // otf в ttf
@@ -50,7 +54,7 @@ export { fontWoff } // ttf + woff
 export { fontWoff2 } // ttf в woff2
 export { fontIcons } // перенос шрифтовых иконок в папку fonts
 
-// Нужный формат подставить в mainTasks
+// Нужный формат подставить в mainTasks (по умолчанию woff2)
 // fontWoff
 // fontWoff2
 

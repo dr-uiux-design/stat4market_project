@@ -1,13 +1,8 @@
-// Сбросы
-@import "./vendor/normalize";
-
 // Миксины
 @import "./_mixins/*.scss";
 
 // Базовые настройки
-@import "./_config/fonts";
-@import "./_config/vars";
-@import "./_config/_base";
+@import "./_config/*.scss";
 
 // Библиотеки
 @import "./vendor/font-icons"; // Шрифтовые иконки
@@ -17,9 +12,9 @@
 // Компоненты
 @import "../components/Preloader/preloader"; // Отложенная загрузка страницы
 @import "../components/Btn-top/btn-top"; // Кнопка наверх
+@import "../components/Form/form"; // Элементы формы
 
-@import "../components/Form/form"; // элементы формы
-
+// Плагины
 // @import "../components/Accordion/accordion"; // Аккордион
 // @import "../components/Modal/modal"; // Модальное окно
 // @import "../components/Slick-slider/slick-slider"; // Slick слайдер

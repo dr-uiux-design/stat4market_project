@@ -8,7 +8,7 @@ const srcFolder = './src'; // папка с файлами в разработк
 // Пути к файлам из рабочей папки
 export const path = {
 	build: {
-		files: `${buildFolder}/`,
+    files: `${buildFolder}/`,
 		html: `${buildFolder}/`,
 		css: `${buildFolder}/css/`,
 		js: `${buildFolder}/js/`,
@@ -24,15 +24,15 @@ export const path = {
 		images: `${srcFolder}/img/*.{png,jpg,jpeg,gif, webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		fonts: `${srcFolder}/fonts/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
+		fontSrc: `${srcFolder}/fonts/_local-fonts.scss`,
 		fontIcons: `${srcFolder}/fonts/font-icons/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
 		spriteSvg: `${srcFolder}/img/_svg/*.svg`,
 	}, // папка с исходниками
 	watch: {
-    components: `${srcFolder}/components/**/*.*`,
 		files: `${srcFolder}/files/**/*.*`,
-		html: `${srcFolder}/html/**/*.html`,
-		scss: `${srcFolder}/scss/**/*.{sass,scss}`,
-		js: `${srcFolder}/js/**/*.js`,
+		html: [`${srcFolder}/html/**/*.html`, `${srcFolder}/components/**/*.html`],
+		scss: [`${srcFolder}/scss/**/*.{sass,scss}`, `${srcFolder}/components/**/*.{sass,scss}`],
+		js: [`${srcFolder}/js/**/*.js`, `${srcFolder}/components/**/*.js`],
 		images: `${srcFolder}/img/**/*.{png,jpg,jpeg,gif,svg,ico,webp}`,
 		fonts: `${srcFolder}/fonts/**/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
 		spriteSvg: `${srcFolder}/img/_svg/**/*.svg`,

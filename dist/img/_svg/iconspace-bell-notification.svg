@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Iconspace_Bell Notification</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconspace_UI-element" transform="translate(-122.000000, -505.000000)">
+            <g id="Iconspace_Bell-Notification" transform="translate(120.000000, 504.000000)">
+                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M9.76756439,20 C10.1133738,20.5978014 10.7597176,21 11.5,21 C12.2402824,21 12.8866262,20.5978014 13.2324356,20 L9.76756439,20 L9.76756439,20 Z M15.3739825,20 C14.9299397,21.7252272 13.3638394,23 11.5,23 C9.63616057,23 8.07006028,21.7252272 7.62601749,20 L2,20 L4.48303591,13.8074176 L4.48303591,10 C4.48303591,6.13400675 7.62463774,3 11.5,3 C15.3753623,3 18.5169641,6.13400675 18.5169641,10 L18.5169641,13.8074176 L21,20 L15.3739825,20 Z M16.5121172,14.1925824 L16.5121172,10 C16.5121172,7.23857625 14.2681159,5 11.5,5 C8.7318841,5 6.48788279,7.23857625 6.48788279,10 L6.48788279,14.1925824 L4.96122493,18 L18.0387751,18 L16.5121172,14.1925824 Z" id="Shape" fill="#2E2F30" fill-rule="nonzero"></path>
+                <circle id="Shape" fill="#2E2F30" cx="16" cy="4" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
