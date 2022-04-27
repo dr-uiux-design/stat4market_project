@@ -5,16 +5,18 @@
 <body>
   @include('../components/Preloader/_preloader.html')
   @include('../components/Btn-top/_btn-top.html')
+ <!-- Wrapper -->
+  <div class="wrapper">
+    @include('./blocks/_header.html')
 
-  @include('./blocks/_header.html')
+    <main class="main">
+      <div class="container">
+        <h1 style="margin-top: 100px; text-align: center;">Стартовый шаблон Gulp 4</h1>
+      </div>
+    </main>
 
-  <main class="wrapper">
-    <div class="container">
-      <h1 style="margin-top: 100px;">Стартовый шаблон Gulp 4</h1>
-    </div>
-  </main>
-
-  @include('./blocks/_footer.html')
+    @include('./blocks/_footer.html')
+  </div>
+   <!-- End Wrapper -->
 </body>
-
 </html>
