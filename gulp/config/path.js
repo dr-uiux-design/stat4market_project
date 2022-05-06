@@ -26,7 +26,7 @@ export const path = {
 		fonts: `${srcFolder}/fonts/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
 		fontSrc: `${srcFolder}/fonts/_local-fonts.scss`,
 		fontIcons: `${srcFolder}/fonts/font-icons/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
-		spriteSvg: `${srcFolder}/img/_svg/*.svg`,
+		spriteSvg: `${srcFolder}/img/icons/*.svg`,
 	}, // папка с исходниками
 	watch: {
 		files: `${srcFolder}/files/**/*.*`,
@@ -35,7 +35,7 @@ export const path = {
 		js: [`${srcFolder}/js/**/*.js`, `${srcFolder}/components/**/*.js`],
 		images: `${srcFolder}/img/**/*.{png,jpg,jpeg,gif,svg,ico,webp}`,
 		fonts: `${srcFolder}/fonts/**/*.{eot,ttf,otf,otc,woff,woff2,svg}`,
-		spriteSvg: `${srcFolder}/img/_svg/**/*.svg`,
+		spriteSvg: `${srcFolder}/img/icons/**/*.svg`,
 	}, // слежение за изминениями
 	clean: buildFolder, // удаление папки с результатом
 	buildFolder: buildFolder,

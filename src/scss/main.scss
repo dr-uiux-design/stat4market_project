@@ -4,26 +4,7 @@
 // Базовые настройки
 @import "./_config/*.scss";
 
-// Библиотеки
-@import "./vendor/font-icons"; // Шрифтовые иконки
-// @import "../../node_modules/slick-carousel/slick/slick.scss"; // Slick Slider
-// @import "./vendor/micromodal"; // Модальное окно
-
-// Компоненты
-@import "../components/Preloader/preloader"; // Отложенная загрузка страницы
-@import "../components/Btn-top/btn-top"; // Кнопка наверх
-@import "../components/Form/form"; // Элементы формы
-
-// Плагины
-// @import "../components/Accordion/accordion"; // Аккордион
-// @import "../components/Modal/modal"; // Модальное окно
-// @import "../components/Slick-slider/slick-slider"; // Slick слайдер
-// @import "../components/Tabs/tabs"; // Табы
-
 // Blocks
-@import "./blocks/header";
-@import "./blocks/footer";
+@import "./blocks/*.scss";
 
-// Pages
-@import "./_pages/_thank-you";
-@import "./_pages/_privacy-policy";
+@import "./media";

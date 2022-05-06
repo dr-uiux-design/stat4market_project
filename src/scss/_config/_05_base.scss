@@ -6,8 +6,73 @@
   padding: 0;
 }
 
+// Preloader
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $color--bg-light;
+  z-index: 1001;
+  &__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  &__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: $color--primary;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+    &:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+  }
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 html {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -18,6 +83,7 @@ body {
 }
 
 body {
+  background-color: $color--bg-light;
   margin: 0;
   min-width: 320px;
   position: relative;
@@ -25,7 +91,7 @@ body {
   font-family: $font--default;
   font-size: $font-size--body;
   font-weight: $font--400;
-  line-height: $line-height--150;
+  line-height: $line-height--body;
 }
 
 .wrapper {
@@ -64,67 +130,47 @@ h6 {
   line-height: $line-height--120;
 }
 
+h1,
+h2 {
+  font-weight: $font--700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font--600;
+}
+
 h1 {
   font-size: $font-size--h1;
-  font-weight: $font--800;
+  line-height: $line-height--h1;
   letter-spacing: -1px;
 }
 
 h2 {
   font-size: $font-size--h2;
-  font-weight: $font--800;
-  letter-spacing: -1px;
+  line-height: $line-height--h2;
 }
 
 h3 {
   font-size: $font-size--h3;
-  font-weight: $font--700;
-  line-height: $line-height--150;
+  line-height: $line-height--h3;
 }
 
 h4 {
   font-size: $font-size--h4;
-  font-weight: $font--700;
-  line-height: $line-height--150;
+  line-height: $line-height--h4;
 }
 
 h5 {
   font-size: $font-size--h5;
-  font-weight: $font--700;
-  line-height: $line-height--150;
+  line-height: $line-height--h5;
 }
 
 h6 {
   font-size: $font-size--h6;
-  font-weight: $font--700;
-}
-
-.p-20 {
-  font-size: 20px;
-  &:not(:last-child) {
-    margin-bottom: 24px;
-  }
-}
-
-.p-18 {
-  font-size: 18px;
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
-
-.p-16 {
-  font-size: 16px;
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
-
-.p-14 {
-  font-size: 14px;
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
+  line-height: $line-height--h6;
 }
 
 // Base
@@ -225,6 +271,12 @@ a {
   }
 }
 
+p {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
 mark {
   background: #fff2be;
 }
@@ -267,17 +319,17 @@ mark {
 // Buttons
 .btn {
   @include reset-btn;
-  @include trans-btn;
   display: inline-block;
-  min-height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
+  min-height: 50px;
+  line-height: 50px;
+  padding: 0 32px;
   background: $color--primary;
-  border-radius: 6px;
+  border-radius: 12px;
   color: $color--light;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   text-align: center;
+  transition: background 0.35s ease-in-out;
 
   &:hover {
     color: $color--light;
@@ -289,5 +341,65 @@ mark {
     color: $color--body;
     background: transperant;
     border: 2px solid $color--primary;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+.text-primary {
+  color: $color--primary;
+}
+
+.title {
+  text-align: center;
+
+  &__logo {
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 7px;
+      background: $gradient--primary;
+      border-radius: 100px;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+
+  &__description {
+    margin-top: 30px;
+  }
+}
+
+section {
+  padding-top: 140px;
+}
+
+.circle-bg {
+  width: 762px;
+  height: 762px;
+  background: $gradient--primary;
+  box-shadow: 20px 20px 0px rgba(207, 114, 211, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.8;
+  &_1 {
+    top: -198px;
+    left: -681px;
+  }
+  &_2 {
+    top: 385px;
+    right: -720px;
+    box-shadow: -20px 20px 0px rgba(207, 114, 211, 0.3);
   }
 }

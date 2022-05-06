@@ -23,7 +23,7 @@ import { html } from "./gulp/tasks/html.js" ;
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js" ;
 import { images } from "./gulp/tasks/images.js" ;
-import { fontTTF, fontWoff, fontWoff2, fontIcons } from "./gulp/tasks/fonts.js" ;
+import { fontTTF, fontWoff, fontWoff2, fontIcons, fonts } from "./gulp/tasks/fonts.js" ;
 import { spriteSvg } from "./gulp/tasks/spriteSvg.js" ;
 import { server } from "./gulp/tasks/server.js" ;
 import { zip } from "./gulp/tasks/zip.js";
@@ -32,6 +32,7 @@ import { zip } from "./gulp/tasks/zip.js";
 // Наблюдение за файлами
 function watcher() {
 	gulp.watch(path.watch.files, copy);
+	gulp.watch(path.watch.fonts, copy);
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, js);
@@ -41,6 +42,7 @@ function watcher() {
 
 // Запуск задач по отдельности gulp название
 export { watcher }
+export { fonts }
 export { html }
 export { scss }
 export { js }
@@ -58,7 +60,7 @@ export { fontIcons } // перенос шрифтовых иконок в пап
 // fontWoff
 // fontWoff2
 
-const mainTasks = gulp.series(fontWoff2, fontIcons, gulp.parallel(copy, html, scss, js, images, spriteSvg));
+const mainTasks = gulp.series(fonts, spriteSvg, gulp.parallel(copy, html, scss, js, images, spriteSvg));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));

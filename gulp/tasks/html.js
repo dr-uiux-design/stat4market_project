@@ -47,14 +47,14 @@ export const html = () => {
 		.pipe(typograf({
 			locale: ['ru', 'en-US']
 		}))
-		.pipe(
-			app.plugins.if(
-				app.isProd,
-				htmlmin({
-					collapseWhitespace: true
-				})
-			)
-		)
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isProd,
+		// 		htmlmin({
+		// 			collapseWhitespace: true
+		// 		})
+		// 	)
+		// )
 		.pipe(size({
 			title: "End HTML"
 		}))

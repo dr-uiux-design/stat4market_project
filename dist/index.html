@@ -4,95 +4,236 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <meta description="">
+    <title>Stat4market — Обучающие курсы для поставщиков на маркетплейсы</title>
 
-    <!-- Favicon (https://realfavicongenerator.net)-->
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#000">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+  <meta name="msapplication-TileColor" content="#cf51ce">
+  <meta name="theme-color" content="#cf51ce">
 
     <!-- Local fonts -->
-    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./fonts/Inter-Semibold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./fonts/Inter-Extrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="prefetch" href="./fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="prefetch" href="./fonts/Lato-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="prefetch" href="./fonts/Lato-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="prefetch" href="./fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.min.css">
-
-    <!-- JS -->
-    <script defer src="js/main.min.js"></script>
+    <link rel="stylesheet" href="css/main.min.css?_v=20220506100658">
 </head>
 
 <body>
   <!-- Preloader -->
-<div class="preloader">
-  <div class="preloader__row">
-    <div class="preloader__item"></div>
-    <div class="preloader__item"></div>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
   </div>
-</div>
 
-  <!-- Btn-top -->
-<button type="button" class="btn-top" title="Наверх"></button>
+  <div class="circle-bg circle-bg_1"></div>
+  <div class="circle-bg circle-bg_2"></div>
 
- <!-- Wrapper -->
+  <!-- Wrapper -->
   <div class="wrapper">
     <!-- Header -->
-<div class="header">
+<header class="header">
   <div class="container header__container">
 
-    <!-- Logo -->
-    <a href="#" class="header__logo logo">
-      <img loading="lazy" src="img/logo.png" class="logo__img" width="40" height="40" alt="Название компании">
-    </a>
+    <div class="header__col-1">
+      <a href="./" class="header__logo logo"><img src="img/logo.svg" class="logo__img" alt="Stat4market"></a>
+      <div class="header__description">Надежный сервис аналитики для поставщиков на маркетплейсы</div>
+    </div>
 
-    <!-- Menu -->
-    <!-- Burger Button -->
-    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-      <span class="burger__line"></span>
-    </button>
-    <nav class="header__nav">
-      <ul class="list-reset menu header__menu">
-        <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+    <div class="header__col-2">
+      <!-- Menu -->
+      <!-- Burger Button -->
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#analitics" class="menu__link menu__link_dropdown">Аналитика <i class="ic-arrow_dropdown"></i></a>
+            <ul class="analitics__submenu submenu">
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 1</a></li>
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 2</a></li>
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 3</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#training" class="menu__link">Обучение</a></li>
+        </ul>
+      </nav>
+
+      <ul class="menu-mob">
+        <li><a href="#analitics">Аналитика</a></li>
+        <li><a href="#training">Обучение</a></li>
+        <li><a href="tel:+74994503141" class="phone">
+          <svg class="icon phone__icon">
+            <use xlink:href="img/svg-sprite.svg#ic-phone"></use>
+          </svg> 8 (499) 450-31-41</a></li>
       </ul>
-    </nav>
+    </div>
+
+    <div class="header__col-3">
+      <a href="tel:+74994503141" class="header__phone phone">
+        <svg class="icon ic-phone">
+          <use xlink:href="img/svg-sprite.svg#ic-phone"></use>
+        </svg> 8 (499) 450-31-41</a>
+
+      <a href="#formLogin" class="btn header__login login__btn">
+        <svg class="icon btn__icon login__icon">
+          <use xlink:href="img/svg-sprite.svg#ic-login"></use>
+        </svg>Войти</a>
+    </div>
+
   </div>
-</div>
+</header>
 
     <main class="main">
-      <div class="container">
-        <h1 style="margin-top: 100px; text-align: center;">Стартовый шаблон Gulp 4</h1>
-      </div>
-    </main>
+      <!-- Hero -->
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__content">
 
-    <!-- Footer -->
-<div class="footer">
-  <div class="container footer__container">
-    <div class="footer__content">
-      <p class="footer__copyright">Copyright © Все права защищены 2022</p>
-      <div class="footer__links">
-        <!-- <a href="terms-of-use.html" target="_blank">Пользовательское соглашение</a> -->
-        <a href="privacy-policy.html" target="_blank">Политика конфеденциальности</a>
+      <!-- Breadcrumb -->
+      <ol class="hero__breadcrumb breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a class="breadcrumb__link" itemprop="item" href="./">
+            <span itemprop="name">Главная</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a class="breadcrumb__link" itemprop="item" href="./training">
+            <span itemprop="name">Обучение</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+
+      <h1 class="hero__title"><span class="text-primary">Обучающие курсы</span> для поставщиков на маркетплейсы</h1>
+      <div class="hero__price price">
+        <svg class="icon price__icon">
+          <use xlink:href="img/svg-sprite.svg#ic-wallet"></use>
+        </svg>
+        <div class="price__sum"><span>от</span> 9 900</div>
+      </div>
+      <div class="hero__text">
+        <p>Обучающие курсы по работе и продвижению на маркетплейсах от практикующих селлеров</p>
+        <p>Добро пожаловать в Академию. Это место для эффективного обучения, где мы рассказываем, как работают маркетплейсы и никогда
+          не вдаёмся
+          в теорию, которая не понадобится на практике.</p>
+        <p>Нащи уроки помогут понять логику работы площадок и взять управление продажами в свои руки, а не действовать наугад. Становись
+          экспертом в работе с маркетплейсами и увеличивай свою прибыль.</p>
+      </div>
+    </div>
+    <div class=" hero__img">
+      <picture><source srcset="img/hero_img.webp" type="image/webp"><img src="img/hero_img.png" width="560" height="560" alt=""></picture>
+    </div>
+  </div>
+</section>
+
+      <!-- About -->
+<section class="about">
+  <div class="container about__container">
+
+    <h2 class="about__title title">Небольшая предыстория о том, почему нам можно доверять</h2>
+    <h2 class="about__title_mob title">Как работает модуль Аналитика по API для Wildberries?</h2>
+
+    <div class="about__list">
+      <div class="about__item about__item--imgleft">
+        <div class="about__item_img">
+          <picture><source srcset="img/about_img-01.webp" type="image/webp"><img src="img/about_img-01.png" alt="" width="470" height="470"></picture>
+        </div>
+        <div class="about__item_text">
+          <p>Свой путь в бизнесе мы начали в 2016 г. У нас были свои островные магазины в крупных ТЦ Москвы
+            («Европейский», «Метрополис», «Мега» и др.), а также свой интернет-магазин. Мы накопили большой опыт в продвижении своих товаров
+            за счёт многочисленных запусков разных рекламных каналов и работы с блогерами.</p>
+        </div>
+
+      </div>
+
+      <div class="about__item about__item--imgright">
+        <div class="about__item_text">
+          <p>Летом 2019 года мы вышли на маркетплейсы и после работы с ними в течение 2 месяцев приняли решение
+            развивать только это направление. И не прогадали. Весь накопленный опыт мы направили на улучшение и продвижение наших брендов.
+          </p>
+          <p>Пришло время поделится знаниями и лайфхаками, которые будут собраны и доступны в нашей Академии
+            stat4market</p>
+        </div>
+        <div class="about__item_img">
+          <picture><source srcset="img/about_img-02.webp" type="image/webp"><img src="img/about_img-02.png" alt="" width="470" height="470"></picture>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+      <!-- Training -->
+<section class="training">
+  <div class="container training__container">
+    <div class="training__title title">
+      <h2 class="title__h2">Обучение по продажам на маркетплейсах от <span class="title__logo">stat<span
+            class="text-primary">4</span>market</span></h2>
+      <p class="title__description">«Увеличение реальной прибыли, конкретика и ключевые инструменты, которые дают результат» — на этом
+        тезисе созданы наши курсы</p>
+    </div>
+
+    <div class="training__featured featured">
+      <div class="featured__item">
+        <div class="featured__item_icon">
+          <svg class="icon ic-featured">
+            <use xlink:href="img/svg-sprite.svg#ic-training_01"></use>
+          </svg>
+        </div>
+        <h5 class="featured__item_title">Наше обучение построено очень лаконично и просто</h5>
+        <p class="featured__item_text">Все занятия короткие по продолжительности для лёгкого восприятия и понимания. Мы даём в уроках только
+          конкретику, без лишней теории и «воды».</p>
+      </div>
+
+      <div class="featured__item">
+        <div class="featured__item_icon">
+          <svg class="icon ic-featured">
+            <use xlink:href="img/svg-sprite.svg#ic-training_02"></use>
+          </svg>
+        </div>
+        <h5 class="featured__item_title">Ко всем урокам есть дополнительные материалы</h5>
+        <p class="featured__item_text">Презентации, краткие инструкции, чек-листы и памятки по работе с маркетплейсами</p>
+      </div>
+
+      <div class="featured__item">
+        <div class="featured__item_icon">
+          <svg class="icon ic-featured">
+            <use xlink:href="img/svg-sprite.svg#ic-training_03"></use>
+          </svg>
+        </div>
+        <h5 class="featured__item_title">Наше обучение — практико-ориентированное</h5>
+        <p class="featured__item_text">Поэтому после прохождения уроков ты будешь выполнять задания, которые помогут тебе закрепить
+          полученные знания на практике.</p>
+      </div>
+
+      <div class="featured__item">
+        <div class="featured__item_icon">
+          <svg class="icon ic-featured">
+            <use xlink:href="img/svg-sprite.svg#ic-training_04"></use>
+          </svg>
+        </div>
+        <h5 class="featured__item_title">Создатели нашей Академии</h5>
+        <p class="featured__item_text">Действующие селлеры с большим опытом в продажах на маркетплейсах, эксперты компании stat4market, а также профессиональные лекторы и методологи.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </main>
 
   </div>
-   <!-- End Wrapper -->
+  <!-- End Wrapper -->
+
+  <!-- JS -->
+  <script defer src="js/main.min.js?_v=20220506100658"></script>
 </body>
+
 </html>

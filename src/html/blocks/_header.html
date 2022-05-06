@@ -1,25 +1,54 @@
 <!-- Header -->
-<div class="header">
+<header class="header">
   <div class="container header__container">
 
-    <!-- Logo -->
-    <a href="#" class="header__logo logo">
-      <img loading="lazy" src="@img/logo.png" class="logo__img" width="40" height="40" alt="Название компании">
-    </a>
+    <div class="header__col-1">
+      <a href="./" class="header__logo logo"><img src="@img/logo.svg" class="logo__img" alt="Stat4market"></a>
+      <div class="header__description">Надежный сервис аналитики для поставщиков на маркетплейсы</div>
+    </div>
 
-    <!-- Menu -->
-    <!-- Burger Button -->
-    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-      <span class="burger__line"></span>
-    </button>
-    <nav class="header__nav">
-      <ul class="list-reset menu header__menu">
-        <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+    <div class="header__col-2">
+      <!-- Menu -->
+      <!-- Burger Button -->
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#analitics" class="menu__link menu__link_dropdown">Аналитика <i class="ic-arrow_dropdown"></i></a>
+            <ul class="analitics__submenu submenu">
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 1</a></li>
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 2</a></li>
+              <li class="submenu__item"><a href="#" class="submenu__link">Ссылка 3</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#training" class="menu__link">Обучение</a></li>
+        </ul>
+      </nav>
+
+      <ul class="menu-mob">
+        <li><a href="#analitics">Аналитика</a></li>
+        <li><a href="#training">Обучение</a></li>
+        <li><a href="tel:+74994503141" class="phone">
+          <svg class="icon phone__icon">
+            <use xlink:href="img/svg-sprite.svg#ic-phone"></use>
+          </svg> 8 (499) 450-31-41</a></li>
       </ul>
-    </nav>
+    </div>
+
+    <div class="header__col-3">
+      <a href="tel:+74994503141" class="header__phone phone">
+        <svg class="icon ic-phone">
+          <use xlink:href="img/svg-sprite.svg#ic-phone"></use>
+        </svg> 8 (499) 450-31-41</a>
+
+
+      <a href="#formLogin" class="btn header__login login__btn">
+        <svg class="icon btn__icon login__icon">
+          <use xlink:href="img/svg-sprite.svg#ic-login"></use>
+        </svg>Войти</a>
+    </div>
+
   </div>
-</div>
+</header>

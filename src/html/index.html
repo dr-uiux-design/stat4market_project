@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-@include('./chank/_head.html', {"title" : "Главная"})
+@include('./chank/_head.html', {"title" : "Stat4market - Обучающие курсы для поставщиков на маркетплейсы"})
 
 <body>
-  @include('../components/Preloader/_preloader.html')
-  @include('../components/Btn-top/_btn-top.html')
- <!-- Wrapper -->
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+
+  <div class="circle-bg circle-bg_1"></div>
+  <div class="circle-bg circle-bg_2"></div>
+
+  <!-- Wrapper -->
   <div class="wrapper">
     @include('./blocks/_header.html')
 
     <main class="main">
-      <div class="container">
-        <h1 style="margin-top: 100px; text-align: center;">Стартовый шаблон Gulp 4</h1>
-      </div>
+      @include('./blocks/_hero.html')
+      @include('./blocks/_about.html')
+      @include('./blocks/_training.html')
     </main>
 
-    @include('./blocks/_footer.html')
   </div>
-   <!-- End Wrapper -->
+  <!-- End Wrapper -->
+
+
+  <!-- JS -->
+  <script defer src="js/main.min.js"></script>
 </body>
+
 </html>

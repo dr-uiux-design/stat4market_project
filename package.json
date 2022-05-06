@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
     "clean": "gulp clean",
+    "fonts": "gulp fonts",
     "fontTTF": "gulp fontTTF",
     "fontWoff": "gulp fontWoff",
     "fontWoff2": "gulp fontWoff2",
@@ -67,6 +68,7 @@
   "description": "",
   "dependencies": {
     "@popperjs/core": "^2.11.5",
+    "aos": "^2.3.4",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",

@@ -55,3 +55,11 @@ export const fontIcons = () => {
     .pipe(app.plugins.newer(app.path.build.fontIcons))
     .pipe(app.gulp.dest(`${app.path.build.fontIcons}`));
 }
+
+// Копировпние папки со шрифтами
+export const fonts = () => {
+	return app.gulp.src(`${app.path.srcFolder}/fonts/**/*.*`) // получаем файлы
+		.pipe(app.gulp.dest(`${app.path.build.fonts}`)) // переносим файлы
+}
+
+
